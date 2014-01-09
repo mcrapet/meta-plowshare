@@ -9,14 +9,13 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
 SECTION = "console/utils"
 
-inherit gitpkgv allarch
+inherit allarch
 
 SRC_URI = "git://code.google.com/p/plowshare.git;protocol=http;branch=master"
-SRCREV = "b51f529c3179e6da2ac6c1cc3218918cc918a1ca"
+SRCREV = "${AUTOREV}"
+PKGV = "${SRCPV}"
 
-PV = "git${SRCREV}"
-PKGV = "${GITPKGV}"
-PR = "r6"
+PR = "r7"
 
 S = "${WORKDIR}/git"
 

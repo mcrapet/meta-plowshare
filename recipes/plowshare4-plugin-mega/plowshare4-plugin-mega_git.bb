@@ -11,11 +11,10 @@ DEPENDS = "openssl"
 inherit gitpkgv
 
 SRC_URI = "git://code.google.com/p/plowshare.plugin-mega.git;protocol=http;branch=master"
-SRCREV = "64ee2ac589ed2f80ad37c2d5453098810b29af34"
+SRCREV = "${AUTOREV}"
+PKGV = "${SRCPV}"
 
-PV = "git${SRCREV}"
-PKGV = "${GITPKGV}"
-PR = "r3"
+PR = "r4"
 
 S = "${WORKDIR}/git"
 
