@@ -7,7 +7,7 @@ LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
     plowshare4 plowshare4-bash-completion plowshare4-plugin-mega \
-    kbd \
+    kbd bash-completion \
     git \
     vim \
 "
