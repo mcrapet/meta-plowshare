@@ -9,7 +9,7 @@ CORE_IMAGE_EXTRA_INSTALL = "\
     plowshare4 plowshare4-bash-completion plowshare4-plugin-mega \
     kbd bash-completion \
     git \
-    vim screen \
+    vim openssh screen \
 "
 
 IMAGE_FSTYPES += "vmdk"
