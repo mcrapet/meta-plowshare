@@ -15,7 +15,7 @@ SRC_URI = "git://code.google.com/p/plowshare.git;protocol=http;branch=master"
 SRCREV = "${AUTOREV}"
 PKGV = "${SRCPV}"
 
-PR = "r7"
+PR = "r8"
 
 S = "${WORKDIR}/git"
 
@@ -23,7 +23,6 @@ do_compile[noexec] = "1"
 
 do_install() {
 	oe_runmake PREFIX="${prefix}" DESTDIR="${D}" install
-	oe_runmake PREFIX="${prefix}" DESTDIR="${D}" install_bash_completion
 }
 
 RDEPENDS_${PN} = "bash sed curl"
