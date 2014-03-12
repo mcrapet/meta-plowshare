@@ -1,15 +1,24 @@
-SUMMARY = "A console-only image for simply running plowshare."
+SUMMARY = "A console-only image for simply running plowshare"
 
 IMAGE_FEATURES += "ssh-server-openssh debug-tweaks doc-pkgs package-management"
 
-PR = "r5"
+PR = "r6"
 LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
     plowshare4 plowshare4-bash-completion plowshare4-plugin-mega \
+    bash-completion bash-completion-extra \
     kbd kbd-consolefonts kbd-keymaps \
-    bash-completion git \
-    vim openssh screen \
+    ${FRAMEBUFFER_PACKAGES} \
+    git vim openssh screen man mc \
+"
+
+FRAMEBUFFER_PACKAGES = "\
+    fbida fim \
+"
+
+RDEPENDS = "\
+    git vim openssh screen man mc \
 "
 
 IMAGE_FSTYPES += "vmdk"
