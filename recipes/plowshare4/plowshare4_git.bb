@@ -9,7 +9,7 @@ SECTION = "console/utils"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
-PR = "r9"
+PR = "r10"
 
 inherit allarch
 
@@ -27,7 +27,7 @@ do_install() {
 RDEPENDS_${PN} = "bash sed curl"
 
 PACKAGES =+ "${PN}-bash-completion"
-FILES_${PN}-bash-completion = "${datadir}/bash-completion/completions/${BPN}"
+FILES_${PN}-bash-completion = "${datadir}/bash-completion/completions/plow*"
 
 ALLOW_EMPTY_${PN}-dev = "0"
 ALLOW_EMPTY_${PN}-dbg = "0"
