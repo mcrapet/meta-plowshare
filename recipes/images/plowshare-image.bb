@@ -2,7 +2,7 @@ SUMMARY = "A console-only image for simply running plowshare"
 
 IMAGE_FEATURES += "ssh-server-openssh debug-tweaks doc-pkgs package-management"
 
-PR = "r6"
+PR = "r7"
 LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
@@ -11,6 +11,7 @@ CORE_IMAGE_EXTRA_INSTALL = "\
     kbd kbd-consolefonts kbd-keymaps \
     ${FRAMEBUFFER_PACKAGES} \
     git vim openssh screen man mc \
+    kernel-modules \
 "
 
 FRAMEBUFFER_PACKAGES = "\
@@ -19,6 +20,7 @@ FRAMEBUFFER_PACKAGES = "\
 
 RDEPENDS = "\
     git vim openssh screen man mc \
+    kernel-modules \
 "
 
 IMAGE_FSTYPES += "vmdk"
