@@ -24,7 +24,7 @@ do_install() {
 	oe_runmake PREFIX="${prefix}" DESTDIR="${D}" install
 }
 
-RDEPENDS_${PN} = "bash sed curl"
+RDEPENDS_${PN} = "bash sed curl util-linux"
 
 PACKAGES =+ "${PN}-bash-completion"
 FILES_${PN}-bash-completion = "${datadir}/bash-completion/completions/plow*"
