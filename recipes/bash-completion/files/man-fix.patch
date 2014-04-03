@@ -1,0 +1,34 @@
+From 492773098004700d670b4e1c12eebac506471d90 Mon Sep 17 00:00:00 2001
+From: Matthieu Crapet <mcrapet@gmail.com>
+Date: Wed, 2 Apr 2014 11:34:49 +0200
+Subject: [PATCH] man: Use -w instead of --path
+
+--path is an alias command line option for -w.
+It is available since man-db 2.6.1-pre1 (2012-02-05).
+
+See commit:
+http://git.savannah.gnu.org/cgit/man-db.git/commit/?id=e37bc92f352c97c61ef63de745e43574d27b1276
+
+For portability (like man-1.6g), prefer using original -w switch.
+
+Signed-off-by: Matthieu Crapet <mcrapet@gmail.com>
+---
+ completions/man | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/completions/man b/completions/man
+index 6e42f85..e1b587d 100644
+--- a/completions/man
++++ b/completions/man
+@@ -58,7 +58,7 @@ _man()
+ 
+     local manpath
+     if [[ $OSTYPE == *@(darwin|linux|freebsd|cygwin)* ]] || _userland GNU; then
+-        manpath=$( manpath 2>/dev/null || command man --path )
++        manpath=$( manpath 2>/dev/null || command man -w )
+     else
+         manpath=$MANPATH
+     fi
+-- 
+1.8.5.3
+
