@@ -9,8 +9,6 @@ SECTION = "console/utils"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
-PR = "r10"
-
 inherit allarch
 
 SRC_URI = "git://code.google.com/p/plowshare.git;protocol=http;branch=master"

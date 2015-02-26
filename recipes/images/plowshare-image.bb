@@ -2,11 +2,10 @@ SUMMARY = "A console-only image for simply running plowshare"
 
 IMAGE_FEATURES += "ssh-server-openssh debug-tweaks doc-pkgs package-management"
 
-PR = "r7"
 LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
-    plowshare4 plowshare4-bash-completion plowshare4-plugin-mega \
+    plowshare plowshare-bash-completion plowshare-module-mega plowshare-modules \
     bash-completion bash-completion-extra \
     kbd kbd-consolefonts kbd-keymaps \
     ${FRAMEBUFFER_PACKAGES} \
@@ -14,8 +13,11 @@ CORE_IMAGE_EXTRA_INSTALL = "\
     kernel-modules \
 "
 
+# Don't include fim for now
+# ERROR: fim was skipped: Recipe is blacklisted: BROKEN: doesn't build with B!=S (flex: can't open lex.lex)
+
 FRAMEBUFFER_PACKAGES = "\
-    fbida fim \
+    fbida \
 "
 
 RDEPENDS = "\
