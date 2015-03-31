@@ -16,8 +16,8 @@ S = "${WORKDIR}/linux"
 SRC_URI = "ftp://www.kernel.org/pub/linux/kernel/v3.x/linux-${PV}.tar.xz \
            file://defconfig"
 
-SRC_URI[md5sum] = "bacfc23a07a6fee0d271a4b062862445"
-SRC_URI[sha256sum] = "b50b563b28e257e54336dadc7c8ca28f13df4416ffbed9b62489154c2ceb5597"
+SRC_URI[md5sum] = "9e59b7ea9501ac5ab4d4a3df5533ed37"
+SRC_URI[sha256sum] = "866eadca255a56ba822aef23a3c749c6b9c9c977bb345c76b6f5fe3c6d166d6b"
 
 LINUX_VERSION_EXTENSION ?= "-m"
 

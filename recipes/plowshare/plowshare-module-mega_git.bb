@@ -1,6 +1,5 @@
 SUMMARY = "mega.co.nz module for Plowshare"
-HOMEPAGE = "http://code.google.com/p/plowshare/"
-BUGTRACKER = "http://code.google.com/p/plowshare/issues/list"
+HOMEPAGE = "https://github.com/mcrapet/plowshare-module-mega"
 
 SECTION = "console/utils"
 
@@ -9,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
 DEPENDS = "openssl"
 
-SRC_URI = "git://code.google.com/p/plowshare.module-mega.git;protocol=http;branch=master"
+SRC_URI = "git://github.com/mcrapet/plowshare-module-mega.git"
 SRCREV = "${AUTOREV}"
 PV = "1+git${SRCPV}"
 S = "${WORKDIR}/git"

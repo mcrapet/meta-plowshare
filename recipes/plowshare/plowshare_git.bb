@@ -1,8 +1,7 @@
 SUMMARY = "Plowshare is a set a tools for managing file sharing services"
 DESCRIPTION = "Plowshare is a set of command-line bash scripts for \
 managing downloads, uploads and remote folders from file hosting providers."
-HOMEPAGE = "http://code.google.com/p/plowshare/"
-BUGTRACKER = "http://code.google.com/p/plowshare/issues/list"
+HOMEPAGE = "https://github.com/mcrapet/plowshare"
 
 SECTION = "console/utils"
 
@@ -11,7 +10,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
 inherit allarch
 
-SRC_URI = "git://code.google.com/p/plowshare.git;protocol=http;branch=master"
+SRC_URI = "git://github.com/mcrapet/plowshare.git"
 SRCREV = "${AUTOREV}"
 PV = "1+git${SRCPV}"
 S = "${WORKDIR}/git"

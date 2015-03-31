@@ -1,7 +1,9 @@
-OpenEmbedded and Yocto layer for providing support for Plowshare4 software.
+OpenEmbedded and Yocto layer providing support for Plowshare software.
 This is just for fun!
 
 * Dependencies
+
+This layer depends on:
 
 URI: git://git.openembedded.org/openembedded-core
 branch: master
@@ -13,8 +15,10 @@ revision: HEAD
 
 * Maintainer(s)
 
-Matthieu Crapet <mcrapet@gmail.com>
+Send patches / pull requests to mcrapet@gmail.com with '[meta-plowshare]' in the subject.
 
-* Contact
+* License
 
-Please contact mcrapet@gmail.com for your patches, suggestions, and questions.
+All metadata is MIT licensed unless otherwise stated. Source code included
+in tree for individual recipes is under the LICENSE stated in each recipe
+(.bb file) unless otherwise stated.
