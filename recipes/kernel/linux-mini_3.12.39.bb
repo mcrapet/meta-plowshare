@@ -1,19 +1,17 @@
-SECTION = "kernel"
 SUMMARY = "Small Linux kernel for x86_64 machines"
+SECTION = "kernel"
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 inherit kernel
 
-PR = "r1"
-
 COMPATIBLE_MACHINE = "generic-core2"
 
 # Important: ${S} != ${B} is not supported here
 S = "${WORKDIR}/linux"
 
-SRC_URI = "ftp://www.kernel.org/pub/linux/kernel/v3.x/linux-${PV}.tar.xz \
+SRC_URI = "https://www.kernel.org/pub/linux/kernel/v3.x/linux-${PV}.tar.xz \
            file://defconfig"
 
 SRC_URI[md5sum] = "9e59b7ea9501ac5ab4d4a3df5533ed37"
@@ -43,15 +41,4 @@ do_configure_prepend() {
 		-e '/CONFIG_LOCALVERSION/d' \
 		-e '/CONFIG_LOCALVERSION_AUTO/d' \
 		< '${WORKDIR}/defconfig' >> ${B}/.config
-
-	if [ "${S}" != "${B}" ]; then
-		cp '${B}/.config' '${S}/.config'
-		cd ${S}
-	fi
 }
-
-do_bundle_initramfs() {
-        :
-}
-do_bundle_initramfs[nostamp] = "1"
-addtask bundle_initramfs after do_compile
