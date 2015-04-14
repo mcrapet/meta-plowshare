@@ -1,3 +1,6 @@
+# Important: This recipe is deprecated. Plowmod tool (included in plowshare package)
+# is dealing with installing/updating these (legacy) modules.
+
 SUMMARY = "Legacy & unmaintained modules for Plowshare"
 HOMEPAGE = "https://github.com/mcrapet/plowshare-modules-legacy"
 

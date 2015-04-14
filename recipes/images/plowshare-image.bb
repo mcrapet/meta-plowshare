@@ -5,7 +5,7 @@ IMAGE_FEATURES += "ssh-server-openssh debug-tweaks doc-pkgs package-management"
 LICENSE = "MIT"
 
 CORE_IMAGE_EXTRA_INSTALL = "\
-    plowshare plowshare-bash-completion plowshare-module-mega plowshare-modules \
+    plowshare plowshare-bash-completion plowshare-module-mega \
     bash-completion bash-completion-extra \
     kbd kbd-consolefonts kbd-keymaps \
     ${FRAMEBUFFER_PACKAGES} \

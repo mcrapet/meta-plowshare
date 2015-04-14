@@ -13,8 +13,11 @@ SRCREV = "${AUTOREV}"
 PV = "1+git${SRCPV}"
 S = "${WORKDIR}/git"
 
-do_install() {
-	oe_runmake PREFIX="${prefix}" DESTDIR="${D}" install
+inherit autotools pkgconfig
+
+# Avoid conflict with plowshare package, will be fixed later (postinst)
+do_install_append() {
+	rm ${D}${datadir}/plowshare/modules/config
 }
 
 RDEPENDS_${PN} = "plowshare"
